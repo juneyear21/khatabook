@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit File</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Edit: <%= filename %></h1>
+        </header>
+        
+        <form action="/update/<%= filename %>" method="post" class="edit-form">
+            <textarea name="filedata" rows="10" class="textarea"><%= data %></textarea>
+            <div class="form-actions">
+                <a href="/" class="back-btn">Back</a>
+                <button type="submit" class="save-btn">Save</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
